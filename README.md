@@ -13,15 +13,16 @@ docs on data https://ghsl.jrc.ec.europa.eu/documents/GHSL_Data_Package_2023.pdf?
 
 General open streetmap browser https://www.openstreetmap.org/
 
-Turn on map data 
+Turn on map data to hunt around for types.
 
-![[img/osm_layers.png]] ![[img/osm_mapdata.png]]
+![Layers](img/osm_layers.png) ![Map Data](img/osm_mapdata.png)
 
 
 browser for osm admin boundaries https://osm-boundaries.com/Map
-nyc osm id 175905
+nyc osm id is 175905
 paris https://www.openstreetmap.org/relation/71525 or https://www.openstreetmap.org/relation/5814660
 
+Use osmdata function getbb('Marin County, CA') to get the bounding box for Marin
 
 
 ## Nadieh Bremer's Lofoten map writeup
