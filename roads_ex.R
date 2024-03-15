@@ -10,6 +10,9 @@ roads <- opq(bbox) %>%
     osmdata_sf()
 
 ## might not nead all SF features for roads?
+## see https://wiki.openstreetmap.org/wiki/Key:highway
+## for values
+
 ggplot(roads$osm_lines) +
     geom_sf() +
     geom_sf(data=roads$osm_polygons) +
