@@ -4,6 +4,7 @@ package.list  <- c(
     'tidyverse'
   , 'tictoc'
   , 'sf'      ## read shape files and general geometry stuff
+  , 'sfheaders'
   , 'osmdata' ## open street maps query engine
   , 'geodata' ## general admin boundaries and such
 )
