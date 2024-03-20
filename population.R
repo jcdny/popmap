@@ -10,6 +10,10 @@ get.populationdf <- function(bbox, year=2020, res=0.5) {
 
     ## make it into a data frame and then to sf geom points
     out <- as.data.frame(popc, xy=T)
+
+    ## calculate a population per cell popdens * area(km^2)
+    out <- out %>% mutate( population = population_density * .9261 * .9261 * cos(y/180*pi))
+
     out <- sfheaders::sf_point(out, x="x", y="y", keep = T)
 
     ## set coordinate reference system for the df
@@ -30,3 +34,4 @@ p <- ggplot(xsf) + geom_sf() + geom_sf_text(data=popdfs, aes(label=l))
 pdf(file="tmp.pdf", width=24, height=36)
 show(p)
 dev.off()
+
