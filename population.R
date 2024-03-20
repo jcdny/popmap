@@ -23,4 +23,10 @@ popdf$l <- round(popdf$population_density/1000,1)
 popdfs <- popdf[which(popdf$l >= 1),]
 
 p <- ggplot(xsf) + geom_sf() + geom_sf_text(data=popdfs, aes(label=l))
+
+
+## this is how to save a pdf for printing
+
+pdf(file="tmp.pdf", width=24, height=36)
 show(p)
+dev.off()
