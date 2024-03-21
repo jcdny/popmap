@@ -23,7 +23,7 @@ get.populationdf <- function(bbox, year=2020, res=0.5) {
 }
 
 popdf <- get.populationdf(bbox)
-popdf$l <- round(popdf$population_density/1000,1)
+popdf$l <- round(popdf$population/2000,0)
 popdfs <- popdf[which(popdf$l >= 1),]
 
 p <- ggplot(xsf) + geom_sf() + geom_sf_text(data=popdfs, aes(label=l))
